@@ -1099,3 +1099,60 @@ footer {
         font-size: 0.875rem;
       }
     }
+
+/* Mobile-first approach - default styles for small screens */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.hero-img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional */
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+/* Laptop/Desktop styles */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 3rem;
+  }
+  
+  .hero-img {
+    flex: 0 0 40%; /* Takes 40% of the width */
+    max-width: 400px;
+  }
+  
+  .hero-text {
+    flex: 1; /* Takes remaining space */
+  }
+  
+  /* Keep buttons in their own row below */
+  .hero-actions {
+    margin-top: 2rem;
+  }
+}
+
+/* For even larger screens, you might want to limit the max width */
+@media (min-width: 1200px) {
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
