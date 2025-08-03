@@ -2,7 +2,7 @@
     {
         "title": "Customer Retention Analytics Dashboard",
         "description": "Built an interactive Power BI dashboard analyzing customer behavior patterns and predicting churn with 90% accuracy. Integrated multiple data sources and implemented real-time updates.",
-        "category": "dashboard",
+        "category": "Dashboard",
         "technologies": ["Power BI", "SQL", "Python", "DAX"],
         "date": "2024",
         "link": "https://github.com/tayoasaolu/customer-retention-dashboard"
@@ -10,7 +10,7 @@
     {
         "title": "Sales Performance Automation",
         "description": "Automated daily sales reporting pipeline reducing processing time from 7 days to under 5 minutes. Implemented error handling and data validation checks.",
-        "category": "automation",
+        "category": "Automation",
         "technologies": ["Python", "SQL", "Azure", "Power Automate"],
         "date": "2024",
         "link": "https://github.com/tayoasaolu/sales-automation"
@@ -18,7 +18,7 @@
     {
         "title": "Inventory Optimization Model",
         "description": "Developed predictive model for inventory management, reducing stockouts by 35% and overstock by 25%. Used machine learning algorithms for demand forecasting.",
-        "category": "analysis",
+        "category": "Analysis",
         "technologies": ["R", "Python", "Tableau", "Machine Learning"],
         "date": "2023",
         "link": "https://github.com/tayoasaolu/inventory-optimization"
@@ -26,7 +26,7 @@
     {
         "title": "Real-time KPI Monitoring System",
         "description": "Implemented organization-wide KPI tracking system with live dashboards for executive decision-making. Integrated with multiple data sources and APIs.",
-        "category": "dashboard",
+        "category": "Dashboard",
         "technologies": ["Power BI", "SQL", "DAX", "REST APIs"],
         "date": "2023",
         "link": "https://github.com/tayoasaolu/kpi-monitoring"
@@ -34,7 +34,7 @@
     {
         "title": "Customer Segmentation Analysis",
         "description": "Performed advanced customer segmentation using clustering algorithms, identifying 5 distinct customer personas that improved targeted marketing ROI by 40%.",
-        "category": "analysis",
+        "category": "Analysis",
         "technologies": ["Python", "Scikit-learn", "SQL", "Tableau"],
         "date": "2023",
         "link": "https://github.com/tayoasaolu/customer-segmentation"
@@ -42,7 +42,7 @@
     {
         "title": "ETL Pipeline Development",
         "description": "Built robust ETL pipelines to consolidate data from 10+ sources into centralized data warehouse, improving data accessibility and quality.",
-        "category": "automation",
+        "category": "Automation",
         "technologies": ["Python", "Apache Airflow", "SQL", "GCP"],
         "date": "2022",
         "link": "https://github.com/tayoasaolu/etl-pipeline"
