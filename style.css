@@ -80,7 +80,7 @@ p {
 
 /* ============ Layout Components ============ */
 section {
-  margin-bottom: 5rem;
+  margin-bottom: 0.1rem;
 }
 
 .card {
@@ -460,7 +460,7 @@ footer {
 
     /* Sections */
     .section {
-      padding: 5rem 0;
+      padding: 0.5rem 0;
     }
 
     .section-title {
