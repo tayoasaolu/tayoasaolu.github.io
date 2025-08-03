@@ -515,3 +515,74 @@ function debounce(func, wait) {
 window.addEventListener('scroll', debounce(() => {
     // Your scroll event code here
 }, 100));
+
+
+// ============ Additional Functions - Enhanced JavaScript ============
+// Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      navLinks.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+
+    // Back to Top Button
+    window.addEventListener('scroll', () => {
+      const backToTop = document.getElementById('backToTop');
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Smooth Scrolling for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          document.getElementById('navLinks').classList.remove('active');
+          document.querySelector('.mobile-menu-toggle').classList.remove('active');
+        }
+      });
+    });
+
+    // Form Submission (replace with your form handling)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add your form submission logic here
+      alert('Thank you for your message! I will get back to you soon.');
+      this.reset();
+    });
+
+    // Project Filtering
+    function filterProjects(category) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Filter projects (implement based on your project structure)
+      console.log('Filtering projects by:', category);
+    }
+
+    // Loading overlay
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loadingOverlay').classList.remove('active');
+      }, 500);
+    });
