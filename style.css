@@ -284,6 +284,7 @@ input, textarea {
   background: var(--clr-surface);
   transition: all 0.2s ease;
   font-size: 0.95rem;
+  width: 100%;
 }
 
 input:focus, textarea:focus {
