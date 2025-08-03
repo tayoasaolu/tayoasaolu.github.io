@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Olutayo Asaolu | Data Analyst Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" /> <!-- External CSS file -->
-  <script defer src="script.js"></script> <!-- JavaScript for interactivity -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Replace with your actual GA Measurement ID
+  </script>
 </head>
 <body>
   <header class="navbar">
@@ -17,7 +26,10 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
+        <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
       </nav>
     </div>
   </header>
@@ -53,7 +65,6 @@
             <li>Developed predictive models for customer retention (90% success rate)</li>
           </ul>
         </div>
-
         <button class="toggle" onclick="toggleSection('exp2')">BI & Analytics Manager – FoodCo Nigeria (2019 – 2022)</button>
         <div id="exp2" class="collapsible">
           <ul>
@@ -61,7 +72,6 @@
             <li>Led KPI-based performance model design, boosting efficiency by 50%</li>
           </ul>
         </div>
-
         <button class="toggle" onclick="toggleSection('exp3')">Research & Evaluation – NGO/International Development (2018 – 2019)</button>
         <div id="exp3" class="collapsible">
           <ul>
@@ -74,15 +84,8 @@
 
     <section id="projects">
       <h2>Selected Projects</h2>
-      <div class="grid projects">
-        <a class="project" href="https://github.com/tayoasaolu/sales-forecasting-dashboard" target="_blank">
-          <h3>Sales Forecasting Dashboard</h3>
-          <p>SQL + Power BI dashboard with Azure DB integration and automated refresh</p>
-        </a>
-        <a class="project" href="https://github.com/tayoasaolu/customer-behavior-analytics" target="_blank">
-          <h3>Customer Behavior Analytics</h3>
-          <p>Python-based clustering and retention strategies for e-commerce</p>
-        </a>
+      <div class="grid projects" id="project-container">
+        <!-- Projects will be loaded here from JSON -->
       </div>
     </section>
 
@@ -98,6 +101,25 @@
       </div>
     </section>
 
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <p><strong>Languages:</strong> Python, R, SQL, DAX</p>
+        <p><strong>BI Tools:</strong> Power BI, Tableau, Google Data Studio</p>
+        <p><strong>Cloud/CRM:</strong> GCP, Azure, Salesforce</p>
+        <p><strong>Soft Skills:</strong> Executive Reporting, Team Leadership, Strategic Storytelling</p>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>My Resume</h2>
+      <div class="card">
+        <p>You can view or download my updated resume using the options below:</p>
+        <iframe src="./assets/Olutayo_Asaolu_CV.pdf" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 10px;"></iframe>
+        <p><a href="./assets/Olutayo_Asaolu_CV.pdf" download>Download Resume (PDF)</a></p>
+      </div>
+    </section>
+
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
@@ -108,6 +130,7 @@
           <textarea name="message" rows="4" placeholder="Your message..."></textarea>
           <button type="submit">Send</button>
         </form>
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=tayoasaolu.portfolio" alt="Visitor Badge" />
       </div>
     </section>
   </main>
