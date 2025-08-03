@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Olugbenga Asaolu | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      /* ——— RESET & TOKENS ——— */
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      :root{
+        --clr-bg:#fbfdff;
+        --clr-surface:#ffffff;
+        --clr-primary:#111b47;
+        --clr-accent:#ff433e;
+        --clr-muted:#7c8aa4;
+        --radius:14px;
+        --shadow-sm:0 2px 6px rgba(0,0,0,.06);
+        --shadow-lg:0 22px 55px rgba(0,0,0,.18);
+        --max-w:1150px;
+      }
+      body{font-family:'Inter',sans-serif;background:var(--clr-bg);color:#222;line-height:1.58;scroll-behavior:smooth;}
+      a{color:var(--clr-primary);text-decoration:none;transition:opacity .2s ease,transform .2s ease;}
+      a:hover{opacity:.8;transform:translateY(-1px)}
+      img{max-width:100%;display:block;border-radius:var(--radius)}
+      h1,h2,h3{font-weight:700;line-height:1.25;color:var(--clr-primary)}
+      h2{font-size:2rem;margin-bottom:1.1rem}
+      section{padding:4rem 1rem}
+      main{max-width:var(--max-w);margin:auto}
+      .card{background:var(--clr-surface);border-radius:var(--radius);padding:2rem 1.7rem;box-shadow:var(--shadow-sm)}
+      .grid{display:grid;gap:1.6rem}
+      /* ——— NAVBAR ——— */
+      .navbar{position:sticky;top:0;z-index:1000;background:rgba(17,27,71,.94);backdrop-filter:blur(8px) saturate(180%)}
+      .nav-wrap{max-width:var(--max-w);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem}
+      .brand{color:#fff;font-weight:700;font-size:1rem;letter-spacing:.4px}
+      .nav-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+      .nav-links a{color:#fff;font-size:.94rem}
+      /* ——— HERO ——— */
+      .hero{background:linear-gradient(135deg,#111b47 0%,#1e2c6d 100%);color:#fff;overflow:hidden}
+      .hero-inner{max-width:var(--max-w);margin:auto;padding:5rem 1rem 5.8rem;display:flex;flex-wrap:wrap;align-items:center;gap:3rem}
+      .hero-img{flex:0 0 220px}
+      .hero-img img{width:220px;height:220px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:var(--shadow-lg)}
+      .hero-text{flex:1 1 340px;min-width:280px}
+      .hero-text h1{font-size:2.8rem;color:#fff} /* ensure pure white */
+      .hero-text h1 .accent{color:var(--clr-accent);display:block}
+      .hero-text p{margin-top:1rem;font-size:1.05rem;opacity:.9}
+      /* ——— PROJECTS ——— */
+      #projects .projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:1.4rem}
+      .project{background:var(--clr-surface);padding:1.4rem 1.6rem;border:1px solid #e7ecf6;border-radius:var(--radius);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:.65rem}
+      .project:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+      .project h3{font-size:1.1rem}
+      .project p{font-size:.88rem;color:var(--clr-muted)}
+      /* ——— PLATFORMS ——— */
+      #platforms .platforms-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:1.3rem}
+      .platform{display:flex;flex-direction:column;align-items:center;gap:.8rem;background:var(--clr-surface);padding:1.6rem;border-radius:var(--radius);border:1px solid #e7ecf6;box-shadow:var(--shadow-sm)}
+      .platform:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+      .platform img{width:60px;height:60px;border-radius:0}
+      .platform span{font-weight:600;color:var(--clr-primary)}
+      /* ——— SIGN‑UP / CONTACT ——— */
+      form{display:flex;flex-direction:column;gap:1rem;max-width:480px}
+      input,textarea,button{font:inherit;padding:.75rem 1rem;border:1px solid #ced4e9;border-radius:var(--radius)}
+      button{background:var(--clr-primary);color:#fff;font-weight:600;cursor:pointer;border:none}
+      button:hover{opacity:.9}
+      .social-icons{display:flex;gap:1.1rem;margin-top:1.2rem;flex-wrap:wrap}
+      .social-icons a{color:var(--clr-primary);font-size:1.4rem;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--clr-primary);border-radius:50%;transition:background .2s ease,color .2s ease}
+      .social-icons a:hover{background:var(--clr-primary);color:#fff}
+      /* ——— FOOTER ——— */
+      footer{background:#f5f7fc;text-align:center;padding:1.9rem;font-size:.85rem;color:var(--clr-muted);margin-top:4rem}
+      @media(max-width:600px){.hero-text h1{font-size:2.3rem}.hero-img img{width:160px;height:160px}.nav-links{gap:1rem;justify-content:center}}
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="nav-wrap">
+        <a href="#about" class="brand">Olugbenga Asaolu</a>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#platforms">Other Platforms</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-img">
+          <img src="https://github.com/gbengasaolu/graph_courses_aiw/blob/main/Gbenga%20Asaolu%20CEO%20Pose%201_May%202023.jpeg?raw=true" alt="Olugbenga Asaolu portrait" />
+        </div>
+        <div class="hero-text">
+          <h1>Olugbenga Asaolu<span class="accent"> Public Health Leader, Epidemiologist & Senior Data Scientist</span></h1>
+          <p>Strategic leader in global‑health analytics—turning raw, complex datasets into life‑saving intelligence and internationally recognised publications.</p>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- ===== ABOUT ===== -->
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+          <p>A <strong> Public Health Leader, Epidemiologist and Senior Data Scientist </strong> with more than <strong>15 years</strong> applying biostatistics, real‑world data (RWD) analytics, and machine learning to advance global health.</p>
+          <p>My work leverages computational platforms, causal inference, predictive modelling, and automated analytics to optimise public‑health interventions. I have built surveillance models and longitudinal cohort studies using electronic health records, claims data, and large‑scale informatics systems.</p>
+          <p>I have authored <strong>30+ peer‑reviewed publications</strong>, delivered talks on five continents, and remain passionate about RWD methodologies, Bayesian modelling, and generative‑AI applications for cutting‑edge disease surveillance.</p>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <div class="grid projects">
+          <a class="project" href="https://gbengasaolu.github.io/rmc_life_satisfaction_webpage_gb/" target="_blank" rel="noopener">
+            <h3>Advanced Analytics with R</h3>
+            <p>Interactive life‑satisfaction insights—R Markdown &amp; ggplot.</p>
+          </a>
+          <a class="project" href="https://gbengasaolu.github.io/dsu_wkds_analysis/#home" target="_blank" rel="noopener">
+            <h3>US HIV Mortality Dashboard</h3>
+            <p>Nation‑wide surveillance analytics adopted by CDC programmes.</p>
+          </a>
+          <a class="project" href="https://gbengasaolu.github.io/gapminder_2007/gapminder_2007#home" target="_blank" rel="noopener">
+            <h3>Gapminder 2007 Dashboard</h3>
+            <p>Python Plotly‑Dash exploration of socio‑economic indicators.</p>
+          </a>
+          <a class="project" href="https://gbengasaolu.github.io/Gapminder_lifeexp_gdp/dahboard_final#home" target="_blank" rel="noopener">
+            <h3>Life‑Expectancy &amp; GDP Trends</h3>
+            <p>Comprehensive reproducible analysis with Jupyter &amp; pandas.</p>
+          </a>
+          <a class="project" href="https://gbengasaolu.github.io/GLOBAL_HIV_AIDS_ANALYSIS/" target="_blank" rel="noopener">
+            <h3>Global HIV/AIDS Analysis</h3>
+            <p>Interactive epidemiological insights across continents.</p>
+          </a>
+          <a class="project" href="https://gbengasaolu.github.io/co2_emissions_demo/" target="_blank" rel="noopener">
+            <h3>CO₂ Emissions Dashboard</h3>
+            <p>Real‑time environmental metrics visualised with Plotly.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== PLATFORMS ===== -->
+      <section id="platforms">
+        <h2>Other Platforms</h2>
+        <div class="grid platforms-grid">
+          <a class="platform" href="https://www.linkedin.com/in/dr-olugbenga-asaolu/" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn logo" />
+            <span>LinkedIn</span>
+          </a>
+          <a class="platform" href="https://scholar.google.com/citations?user=caS8KwsAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar logo" />
+            <span>Google Scholar</span>
+          </a>
+          <a class="platform" href="https://github.com/gbengasaolu" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub logo" />
+            <span>GitHub</span>
+          </a>
+          <a class="platform" href="https://www.researchgate.net/profile/Olugbenga-Asaolu-Phd-2?ev=hdr_xprf" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate logo" />
+            <span>ResearchGate</span>
+          </a>
+          <a class="platform" href="https://www.youtube.com/watch?v=g7Da5tdeBYI&t=8s" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube logo" />
+            <span>YouTube</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT & SIGNUP ===== -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+          <p>I’m open to strategic collaborations, speaking engagements, and advisory roles. Subscribe or connect through the social icons below.</p>
+          <form action="mailto:gbengastephen663@gmail.com?subject=Newsletter%20Sign%20Up" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <textarea name="message" rows="4" placeholder="What topics interest you? (optional)"></textarea>
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="social-icons">
+            <a href="https://twitter.com/dr_asaolu" target="_blank" aria-label="X / Twitter">X</a>
+            <a href="https://www.instagram.com/drgbengamotivates" target="_blank" aria-label="Instagram">IG</a>
+            <a href="https://www.linkedin.com/in/dr-olugbenga-asaolu/" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="https://github.com/gbengasaolu" target="_blank" aria-label="GitHub">gh</a>
+            <a href="https://www.youtube.com/watch?v=g7Da5tdeBYI&t=8s" target="_blank" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Adekemi Tech · All rights reserved.
+    </footer>
+  </body>
+</html>
