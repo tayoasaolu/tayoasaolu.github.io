@@ -966,35 +966,53 @@ footer {
       transform: rotate(-45deg);
     }
 
-    /* Project Filters */
+  /* Project Filters - Mobile First Approach */
+  .projects-filter {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Allow buttons to wrap to next line */
+    padding: 0 1rem; /* Add some padding on mobile */
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 1rem; /* Slightly smaller padding on mobile */
+    background: transparent;
+    border: 2px solid var(--clr-border);
+    border-radius: 25px;
+    color: var(--clr-primary);
+    font-weight: 500;
+    font-size: 0.875rem; /* Smaller font on mobile */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping inside buttons */
+  }
+  
+  .filter-btn:hover {
+    border-color: var(--clr-accent);
+    color: var(--clr-accent);
+  }
+  
+  .filter-btn.active {
+    background: var(--clr-accent);
+    border-color: var(--clr-accent);
+    color: white;
+  }
+  
+  /* Tablet and larger screens */
+  @media (min-width: 768px) {
     .projects-filter {
-      display: flex;
-      justify-content: center;
       gap: 1rem;
-      margin-bottom: 2rem;
+      flex-wrap: nowrap; /* Keep buttons in one row on larger screens */
+      padding: 0;
     }
-
+    
     .filter-btn {
       padding: 0.5rem 1.25rem;
-      background: transparent;
-      border: 2px solid var(--clr-border);
-      border-radius: 25px;
-      color: var(--clr-primary);
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      font-size: 1rem; /* Normal font size on larger screens */
     }
-
-    .filter-btn:hover {
-      border-color: var(--clr-accent);
-      color: var(--clr-accent);
-    }
-
-    .filter-btn.active {
-      background: var(--clr-accent);
-      border-color: var(--clr-accent);
-      color: white;
-    }
+  }
 
     /* Navigation CTA */
     .nav-cta {
