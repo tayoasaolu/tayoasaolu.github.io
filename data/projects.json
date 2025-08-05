@@ -14,5 +14,14 @@
         "technologies": ["Python", "Pandas", "Power Automate"],
         "date": "2025",
         "link": "https://github.com/tayoasaolu/customer-behavior-analytics/"
+    },
+    {
+      "title": "PAYE Tax Calculator",
+      "description": "Developed an interactive web-based PAYE calculator using React and JavaScript by translating an Excel payroll tax model. The tool enables Nigerian employees to understand their monthly tax deductions, including pension, NHF, and NHIS, enhancing transparency and financial awareness.",
+      "category": "tool",
+      "technologies": ["React", "JavaScript", "Excel Model"],
+      "date": "2023",
+      "link": "https://olutayo25.github.io/payee-calculator",
+      "article": "https://medium.com/@olutayoasaolu/how-to-calculate-your-taxes-using-paye-as-an-employee-f7a01439ca88"
     }
 ]
